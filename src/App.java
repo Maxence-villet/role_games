@@ -13,7 +13,7 @@ public class App {
         Character ennemie = new Character(10, 3, "Tymother");
     
         // loop
-        boolean turn = false;//n'importe quoi
+        boolean turn = false;
 
 
         while (turn == false) { // tours
@@ -29,7 +29,7 @@ public class App {
                 if ("YES".equals(choice)) {
                     turn = true;
                 }
-                //oui
+                
             }
             
             turn = false;
