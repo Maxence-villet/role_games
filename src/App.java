@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 import Characters.Character;
 
@@ -9,7 +10,10 @@ public class App {
     public static void main(String[] args) throws Exception {
         
         // initialisation
-        Character player = new Character(20, 2, "Gilbert");
+        Random rand = new Random();
+        int randomNum = rand.nextInt((20 - 0) + 1);
+        System.out.println(randomNum);
+        Character player = new Character(4, 2, "Gilbert");
         Character ennemie = new Character(10, 3, "Tymother");
     
         // loop
@@ -25,20 +29,16 @@ public class App {
     
                 choice = choice.toUpperCase();
 
-                System.out.println(choice);
                 if ("YES".equals(choice)) {
                     turn = true;
-                }
-                
+                }     
             }
             
             turn = false;
-
-            
             //enemie attack
             ennemie.setHealth(player.attack());
             
-            if (player.getHealth() > 0) {
+            if (ennemie.getHealth() > 0) {
                 player.setHealth(ennemie.attack()); 
             }
 
@@ -48,9 +48,8 @@ public class App {
             if (ennemie.getHealth() <= 0) {
                 turn = true;
             } 
-
-            System.out.println("Player: \nstrength: " + player.getStrength() + "\nhealth: " + player.getHealth() + "\nname: " + player.getName());
-            System.out.println("Mob: \nstrength: " + ennemie.getStrength() + "\nhealth: " + ennemie.getHealth() + "\nname: " + ennemie.getName());
+            player.tostring();
+            ennemie.tostring();
         }
     }
 }
