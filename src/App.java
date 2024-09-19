@@ -13,7 +13,7 @@ public class App {
         Character ennemie = new Character(10, 3, "Tymother");
     
         // loop
-        boolean turn = false;
+        boolean turn = false;//n'importe quoi
 
 
         while (turn == false) { // tours
