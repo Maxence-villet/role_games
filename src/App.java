@@ -36,9 +36,10 @@ public class App {
             }
             if(player.getHealth() <= 0) {
                 turn = true;
+                System.out.println("GAME OVER");
             }
             if (ennemie.getHealth() <= 0) {
-                ennemie.toString();
+                System.out.println("GG c'est gagné");
                 turn = true;
             } 
             // player.tostring();
